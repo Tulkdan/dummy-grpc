@@ -15,7 +15,7 @@ Then you need to run the server to receive http request with: `node src/client/i
 To check how if it's running, it is only accepting this two requests:
 
 ```sh
-curl localhost:3000 -H "Content-Type: application/json" -d '{"action": "substract", "num1": 2, "num2": 3}'
+curl localhost:3000 -H "Content-Type: application/json" -d '{"action": "sum", "num1": 2, "num2": 3}'
 
 curl localhost:3000 -H "Content-Type: application/json" -d '{"action": "substract", "num1": 2, "num2": 3}'
 ```
