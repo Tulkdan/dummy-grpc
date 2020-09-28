@@ -1,6 +1,6 @@
 const path = require('path')
 
-const PORT = '50051'
+const PORT = '50053'
 const PROTO_PATH = path.join(__dirname, '..', '..', 'protos', 'calculate.proto');
 
 const grpc = require('grpc');
@@ -15,15 +15,15 @@ const packageDefinition = protoLoader.loadSync(
     });
 const hello_proto = grpc.loadPackageDefinition(packageDefinition).Calculations;
 
-const substractNumber = (call, callback) => {
+const multiplyNumbers = (call, callback) => {
   const { num1, num2 } = call.request
-  const result = num1 - num2
+  const result = num1 * num2
   callback(null, { result })
 }
 
 const main = () => {
   const server = new grpc.Server();
-  server.addService(hello_proto.Greeter.service, { calculate: substractNumber });
+  server.addService(hello_proto.Greeter.service, { calculate: multiplyNumbers });
 
   console.log(`server started at 0.0.0.0:${PORT}`)
 

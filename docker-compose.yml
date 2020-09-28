@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  sum:
+    image: "sum:dummy-grpc"
+    ports:
+      - "50050:50050"
+  substraction:
+    image: "substraction:dummy-grpc"
+    ports:
+      - "50051:50051"
+  multiplication:
+    image: "multiplication:dummy-grpc"
+    ports:
+      - "50053:50053"
+  division:
+    image: "division:dummy-grpc"
+    ports:
+      - "50052:50052"
+

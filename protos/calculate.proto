@@ -19,29 +19,19 @@ option java_package = "io.grpc.examples.helloworld";
 option java_outer_classname = "HelloWorldProto";
 option objc_class_prefix = "HLW";
 
-package helloworld;
+package Calculations;
 
 // The greeting service definition.
 service Greeter {
   // Should substract two numbers
-  rpc SubstractNumber (SumNumberRequest) returns (SumNumberReply) {}
+  rpc Calculate (CalculateNumbersRequest) returns (CalculateNumbersReply) {}
 }
 
-// The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
-}
-
-// The response message containing the greetings
-message HelloReply {
-  string message = 1;
-}
-
-message SumNumberRequest {
+message CalculateNumbersRequest {
   int32 num1 = 1;
   int32 num2 = 2;
 }
 
-message SumNumberReply {
+message CalculateNumbersReply {
   int32 result = 1;
 }

@@ -1,0 +1,16 @@
+# url = "localhost:3000" 
+# header = "Content-Type: application/json"
+# data = "{\"action\": \"substract\", \"num1\": 2, \"num2\": 3}"
+
+# url = "localhost:3000" 
+# header = "Content-Type: application/json"
+# data = "{\"action\": \"sum\", \"num1\": 2, \"num2\": 3}"
+
+# url = "localhost:3000" 
+# header = "Content-Type: application/json"
+# data = "{\"action\": \"division\", \"num1\": 6, \"num2\": 3}"
+
+# url = "localhost:3000" 
+# header = "Content-Type: application/json"
+# data = "{\"action\": \"multiply\", \"num1\": 2, \"num2\": 3}"
+
